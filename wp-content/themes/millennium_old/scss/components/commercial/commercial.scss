@@ -1,0 +1,96 @@
+.commercial {
+    background: linear-gradient(to bottom, $third-color 75%, $second-color 30%);
+    padding: 120px 0 0 0;
+
+    .commercial-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .commercial-info {
+
+            > h3 {
+                color: $second-color;
+                font-family: 'Gotham Pro Bold';
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 3.75rem;
+                text-transform: uppercase;
+                margin: 0 0 40px 0;
+            }
+
+            > a {
+                border-radius: 100px;
+                background: $second-color;
+                border: 1px solid $second-color;
+                display: inline-block;
+                padding: 17.5px 22px;
+                color: $third-color;
+                text-align: center;
+                font-family: "Gotham Pro Bold";
+                font-weight: 700;
+                font-size: 0.875rem;
+                line-height: 1.3125rem;
+                text-transform: uppercase;
+                min-width: 260px;
+                transition: background 0.7s ease, color 0.7s ease;
+
+                &:hover {
+                    background: transparent;
+                    color: $second-color;
+                }
+            }
+        }
+
+        .commercial-img {
+            max-width: 770px;
+
+            > img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .commercial {
+
+        .commercial-inner {
+            gap: 40px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .commercial {
+        background: linear-gradient(to bottom, #123E3C 80%, #FFFFFF 30%);
+        padding: 40px 0 0 0;
+
+        .commercial-inner {
+            gap: 40px;
+            flex-direction: column;
+
+            .commercial-info {
+
+                > h3 {
+                    font-size: 1.5rem;
+                    line-height: 1.875rem;
+                    margin: 0 0 30px 0;
+                }
+
+                > a {
+                    padding: 14px 20px;
+                    font-size: 0.75rem;
+                    line-height: 1.125rem;
+                    min-width: 240px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {}

@@ -1,0 +1,153 @@
+.about-building {
+    background: url(../img/background/background-1.png), #123E3C;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+
+    .about-building-box {
+        display: flex;
+        gap: 190px;
+        background: $second-color;
+        padding: 53px 70px;
+
+        .about-building-img {
+            max-width: 350px;
+            width: 100%;
+
+            > img {
+                max-width: 350px;
+                width: 100%;
+                object-fit: contain;
+            }
+            
+        }
+
+        .about-building-descr {
+            margin: 27px 0 0 0;
+
+            > h1 {
+                color: $main-color;
+                font-family: 'Gotham Pro Bold';
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1.875rem;
+                text-transform: uppercase;
+                margin: 0 0 20px 0;
+                max-width: 340px;
+            }
+
+            > ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 0 0 40px 0;
+
+                > li {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    color: $main-color;
+                    font-size: 0.875rem;
+                    line-height: 1.3125rem;
+
+                    &.li-bold {
+                        font-family: 'Gotham Pro Bold';
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            > a {
+                border-radius: 100px;
+                background: $third-color;
+                border: 1px solid $third-color;
+                padding: 17.5px 22px;
+                color: $second-color;
+                text-align: center;
+                font-family: "Gotham Pro Bold";
+                font-weight: 700;
+                font-size: 0.875rem;
+                line-height: 1.3125rem;
+                text-transform: uppercase;
+                display: inline-block;
+                min-width: 290px;
+                transition: background 0.7s ease, color 0.7s ease;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .about-building {
+
+        .about-building-box {
+            gap: 30px;
+            padding: 40px 25px;
+
+            .about-building-img {
+                max-width: 275px;
+
+                > img {
+                    max-width: 275px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .about-building {
+        padding: 15px 0;
+
+        .about-building-box {
+            gap: 10px;
+            padding: 10px 25px 40px 25px;
+            flex-direction: column;
+
+            .about-building-img {
+                max-width: 100%;
+                margin: 0 auto;
+
+                > img {
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+            }
+
+            .about-building-descr {
+                margin: 0;
+
+                > h1 {
+                    font-size: 1rem;
+                    line-height: 1.25rem;
+                    margin: 0 0 15px 0;
+                    max-width: 100%;
+                }
+
+                > ul {
+                    margin: 0 0 30px 0;
+
+                    > li {
+                        gap: 10px;
+                        font-size: 0.75rem;
+                        line-height: 1.125rem;
+                    }
+                }
+
+                > a {
+                    padding: 14px 22px;
+                    font-size: 0.75rem;
+                    line-height: 1.125rem;
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {}

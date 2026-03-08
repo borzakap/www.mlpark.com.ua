@@ -1,0 +1,244 @@
+.specifications {
+    background: $third-color;
+
+    .title-mob {
+        display: none;
+    }
+
+    .specifications-inner {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        max-width: 90%;
+
+        .specifications-img {
+            flex-grow: 1;
+            flex-basis: 0;
+            flex-shrink: 0;
+            position: relative;
+
+            > img {
+                position: absolute;
+                width: calc(50vw - var(--scrollbar) / 2);
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                right: 0;
+            }
+
+            .specifications-title {
+                position: relative;
+                padding: 120px 0 0 0;
+
+                > h2 {
+                    color: $second-color;
+                    font-family: 'Gotham Pro Bold';
+                    font-weight: 700;
+                    font-size: 3rem;
+                    line-height: 3.75rem;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+            }
+        }
+
+        .specifications-info {
+            flex-grow: 1;
+            flex-basis: 0;
+            flex-shrink: 0;
+            position: relative;
+
+            .specifications-text {
+                padding: 120px 0 120px 130px;
+
+                .specifications-items {
+                    display: flex;
+                    gap: 70px;
+
+                    .specifications-item {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+
+                        .specifications-item-line {
+
+                            > p {
+                                color: $second-color;
+                                font-size: 0.875rem;
+                                line-height: 1.3125rem;
+                                margin: 0 0 15px 0;
+
+                                > b {
+                                    font-family: 'Gotham Pro Bold';
+                                    font-weight: 700;
+                                    font-size: 1.125rem;
+                                    line-height: 1.4375rem;
+                                }
+
+                                &:last-child {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+    .specifications {
+
+        .specifications-inner {
+
+            .specifications-img {
+
+                .specifications-title {
+
+                    > h2 {
+                        font-size: 2.5rem;
+                        line-height: 3.125rem;
+                    }
+                }
+            }
+
+            .specifications-info {
+
+                .specifications-text {
+                    padding: 120px 0 120px 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .specifications {
+        background-image: url(../img/content/content-img5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0 0 0;
+
+        .title-mob {
+            display: block;
+            color: $second-color;
+            font-family: "Gotham Pro Bold";
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 3.75rem;
+            text-transform: uppercase;
+            margin: 0 0 40px 0;
+        }
+
+        .specifications-inner {
+            max-width: 100%;
+            flex-direction: column;
+            position: relative;
+
+            .specifications-img {
+                display: none;
+            }
+
+            .specifications-info {
+                width: 100%;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 96%;
+                    height: 100%;
+                    background: $third-color;
+                }
+
+                .specifications-text {
+                    padding: 40px 40px 60px 80px;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .specifications {
+        background-image: url(../img/content/content-img5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 60px 0 0 0;
+
+        .title-mob {
+            display: block;
+            color: $second-color;
+            font-family: "Gotham Pro Bold";
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            text-transform: uppercase;
+            margin: 0 0 40px 0;
+        }
+
+        .specifications-inner {
+            max-width: 100%;
+            flex-direction: column;
+            position: relative;
+
+            .specifications-img {
+                display: none;
+            }
+
+            .specifications-info {
+                width: 100%;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 96%;
+                    height: 100%;
+                    background: $third-color;
+                }
+
+                .specifications-text {
+                    padding: 40px 40px 60px 50px;
+                    position: relative;
+                    z-index: 2;
+
+                    .specifications-items {
+                        gap: 20px;
+                        flex-direction: column;
+
+                        .specifications-item {
+                            gap: 20px;
+
+                            .specifications-item-line {
+
+                                > p {
+                                    font-size: 0.75rem;
+                                    line-height: 1.125rem;
+                                    margin: 0 0 10px 0;
+
+                                    > b {
+                                        font-size: 0.875rem;
+                                        line-height: 1.125rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {}

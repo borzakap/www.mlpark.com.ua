@@ -1,0 +1,180 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a,
+button {
+    cursor: pointer;
+    color: inherit;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    color: $main-color;
+}
+
+.container {
+    width: $container;
+    max-width: 97.7%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    // max-width: 1440px;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5625rem;
+    margin: 0 0 30px 0;
+}
+
+h3 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    margin: 0 0 20px 0;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    margin: 0 0 20px 0;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+:root {
+    --scrollbar: 0px;
+}
+
+sup {
+    top: -0.5em;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro Bold';
+	src: url('../fonts/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@media (min-width: $desktop-breakpoint) {} 
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .container {
+        max-width: 91%;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    body {
+        &.show {
+            overflow: hidden;
+        }
+    }
+    .container {
+        max-width: 91%;
+    }
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    
+    h4,
+    h5,
+    h6 {
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+}

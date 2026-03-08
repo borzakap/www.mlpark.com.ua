@@ -1,0 +1,47 @@
+.breadcrumbs {
+    background: $four-color;
+    padding: 20px 0;
+    margin-top: 117px;
+
+    ul {
+
+        > li {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            color: $third-color;
+            font-size: 0.875rem;
+            line-height: 1.3125rem;
+
+            > a {
+                transition: text-decoration .7s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {}
+
+@media (max-width: $mobile-breakpoint) {
+    .breadcrumbs {
+        padding: 8px 0;
+        margin-top: 56px;
+
+        ul {
+
+            > li {
+                font-size: 0.5625rem;
+                line-height: 0.875rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {}

@@ -1,0 +1,745 @@
+.flats {
+    margin: 60px 0 120px 0;
+
+    h1 {
+        color: $main-color;
+        font-family: 'Gotham Pro Bold';
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.75rem;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+
+    .flats-filter {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 15px;
+        margin: 0 0 40px 0;
+
+        .flats-filter-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 40px;
+            max-width: 620px;
+            width: 100%;
+
+            .house-filter {
+                max-width: 180px;
+                width: 100%;
+
+                > p {
+                    color: $main-color;
+                    font-size: 0.625rem;
+                    line-height: 0.9375rem;
+                    margin: 0 0 10px 0;
+
+                    > b {
+                        font-family: 'Gotham Pro Bold';
+                        font-weight: 700;
+                    }
+                }
+
+                > select {
+                    border-radius: 100px;
+                    border: 1px solid $main-color;
+                    font-family: 'Gotham Pro';
+                    font-weight: 400;
+                    font-size: 0.75rem;
+                    line-height: 0.75rem;
+                    color: $main-color;
+                    padding: 13px 20px 13px 20px;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    overflow: hidden;
+                    background: url(../img/svg/select-arrow.svg) no-repeat right $second-color;
+                    background-position-x: calc(100% - 20px);
+                    cursor: pointer;
+                    outline: none;
+                    width: 100%;
+                }
+            }
+
+            .type-filter {
+                max-width: 180px;
+                width: 100%;
+
+                > p {
+                    color: $main-color;
+                    font-size: 0.625rem;
+                    line-height: 0.9375rem;
+                    margin: 0 0 10px 0;
+
+                    > b {
+                        font-family: 'Gotham Pro Bold';
+                        font-weight: 700;
+                    }
+                }
+
+                > select {
+                    border-radius: 100px;
+                    border: 1px solid $main-color;
+                    font-family: 'Gotham Pro';
+                    font-weight: 400;
+                    font-size: 0.75rem;
+                    line-height: 0.75rem;
+                    color: $main-color;
+                    padding: 13px 20px 13px 20px;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    overflow: hidden;
+                    background: url(../img/svg/select-arrow.svg) no-repeat right $second-color;
+                    background-position-x: calc(100% - 20px);
+                    cursor: pointer;
+                    outline: none;
+                    width: 100%;
+                }
+            }
+
+            .squere-filter {
+                max-width: 180px;
+                width: 100%;
+
+                > p {
+                    color: $main-color;
+                    font-size: 0.625rem;
+                    line-height: 0.9375rem;
+                    margin: 0 0 10px 0;
+
+                    > b {
+                        font-family: 'Gotham Pro Bold';
+                        font-weight: 700;
+                    }
+                }
+
+                .squere-wrapper {
+
+                    .range_container {
+                        display: flex;
+                        flex-direction: column-reverse;
+    
+                        .sliders_control {
+                            position: relative;
+    
+                            input[type=range]::-webkit-slider-thumb {
+                                -webkit-appearance: none;
+                                pointer-events: all;
+                                width: 14px;
+                                height: 14px;
+                                background-color: $third-color;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                              
+                            input[type=range]::-moz-range-thumb {
+                                -webkit-appearance: none;
+                                pointer-events: all;
+                                width: 14px;
+                                height: 14px;
+                                background-color: $third-color;
+                                border-radius: 50%;
+                                cursor: pointer; 
+                            }
+                              
+                            input[type=range]::-webkit-slider-thumb:hover {
+                                box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                -webkit-box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                            }
+                              
+                            input[type=range]::-webkit-slider-thumb:active {
+                                box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                -webkit-box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                            }
+                              
+                            input[type="range"] {
+                                -webkit-appearance: none; 
+                                appearance: none;
+                                height: 2px;
+                                width: 100%;
+                                position: absolute;
+                                background-color: $four-color;
+                                pointer-events: none;
+                            }
+                        }
+    
+                        .form_control {
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 10px;
+                            margin: 0 0 14px 0;
+        
+                            .form_control_container {
+        
+                                > input {
+                                    color: $main-color;
+                                    text-align: center;
+                                    font-size: 0.625rem;
+                                    line-height: 0.9375rem;
+                                    border-radius: 100px;
+                                    border: 1px solid $main-color;
+                                    padding: 4px;
+                                    width: 70px;
+                                    outline: none;
+                                }
+                            }
+                        }
+
+                        #fromSlider {
+                            height: 0;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flats-filter-link {
+
+            > a {
+                border-radius: 100px;
+                background: $third-color;
+                border: 1px solid $third-color;
+                padding: 17.5px 18px;
+                color: $second-color;
+                text-align: center;
+                font-family: "Gotham Pro Bold";
+                font-weight: 700;
+                font-size: 0.875rem;
+                line-height: 1.3125rem;
+                text-transform: uppercase;
+                display: inline-block;
+                min-width: 220px;
+                transition: background 0.7s ease, color 0.7s ease;
+
+                &:hover {
+                    background: transparent;
+                    color: $third-color;
+                }
+            }
+        }
+
+        .filter-mob {
+            display: none;
+        }
+    }
+
+    .flats-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+        gap: 40px;
+
+        .flat-card {
+
+            > a {
+                border: 1px solid $third-color;
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: transform .7s ease, background .7s ease, color .7s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+
+                    .flat-details {
+
+                        .flat-descr {
+                            > p {
+                                background: transparent;
+                                color: $third-color;
+                            }
+                        }
+                    }
+                }
+
+                .flat-details {
+
+                    .flat-img {
+                        padding: 19px 0 0 0;
+                        margin: 0 auto;
+
+                        > img {
+                            width: 100%;
+                            object-fit: cover;
+                            height: 202px;
+                            display: block;
+                            min-height: 202px;
+                            max-height: 202px;
+                            max-width: 288px;
+                        }
+                    }
+
+                    .flat-descr {
+                        padding: 25px 20px 40px 20px;
+
+                        > p {
+                            border-radius: 100px;
+                            background: $third-color;
+                            border: 1px solid $third-color;
+                            padding: 12px 25px;
+                            color: $second-color;
+                            text-align: center;
+                            font-family: "Gotham Pro Bold";
+                            font-weight: 700;
+                            font-size: 0.75rem;
+                            line-height: 1.125rem;
+                            text-transform: uppercase;
+                            display: inline-block;
+                            width: 100%;
+                            transition: background 0.7s ease, color 0.7s ease;
+                            margin: 0;
+                        }
+
+                        .flat-descr-row {
+                            display: flex;
+                            gap: 15px;
+                            margin: 0 0 20px 0;
+
+                            .text {
+
+                                > h6 {
+                                    color: $third-color;
+                                    font-family: 'Gotham Pro Bold';
+                                    font-weight: 700;
+                                    font-size: 1.125rem;
+                                    line-height: 1.4375rem;
+                                    margin: 0 0 10px 0;
+                                }
+
+                                > p {
+                                    color: $main-color;
+                                    font-size: 0.75rem;
+                                    line-height: 1.125rem;
+                                    margin: 0 0 5px 0;
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin: 60px 0 0 0;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .page-numbers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $third-color;
+            text-align: center;
+            font-family: 'Gotham Pro Bold';
+            font-weight: 700;
+            font-size: 0.875rem;
+            line-height: 1.3125rem;
+            text-transform: uppercase;
+            padding: 5px;
+            border: 1px solid $four-color;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            transition: background .7s ease, color .7s ease;
+
+            &:hover {
+                background: $third-color;
+                color: $second-color;
+            }
+        }
+
+        .current {
+            background: $third-color;
+            color: $second-color;
+        }
+
+        .dots {
+            &:hover {
+                background: transparent;
+                color: $third-color;
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+    .flats {
+    
+        .flats-cards {
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .flats {
+    
+        .flats-cards {
+            grid-template-columns: repeat(auto-fill, minmax(31.4%, 1fr));
+            gap: 25px;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .flats {
+        margin: 30px 0 60px 0;
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            margin: 0 0 10px 0;
+        }
+    
+        .flats-filter {
+            margin: 0 0 30px 0;
+    
+            .flats-filter-box,
+            .flats-filter-link {
+                display: none;
+            }
+
+            .filter-mob {
+                display: block;
+                width: 100%;
+
+                .filter-title {
+
+                    > p {
+                        color: $main-color;
+                        font-size: 0.75rem;
+                        line-height: 1.125rem;
+                        margin: 0;
+                        position: relative;
+                        width: 100%;
+                        border-radius: 100px;
+                        border: 1px solid $main-color;
+                        background: $four-color;
+                        padding: 12px 20px;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 20px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 24px;
+                            height: 21px;
+                            background-image: url(../img/svg/filter-link.svg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                        }
+                    }
+
+                    .filter-list {
+                        display: none;
+                        transform: translate(0px, 10%);
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+                        transition: all 0.3s ease 0s;
+                        border-radius: 0 0 20px 20px;
+                        border-top: none;
+                        border-bottom: 1px solid $main-color;
+                        border-left: 1px solid $main-color;
+                        border-right: 1px solid $main-color;
+                        background: $second-color;
+                        padding: 12px 20px;
+
+                        .house-filterr {
+                            width: 100%;
+                            margin: 0 0 15px 0;
+            
+                            > p {
+                                color: $main-color;
+                                font-size: 0.625rem;
+                                line-height: 0.9375rem;
+                                margin: 0 0 10px 0;
+            
+                                > b {
+                                    font-family: 'Gotham Pro Bold';
+                                    font-weight: 700;
+                                }
+                            }
+            
+                            > select {
+                                border-radius: 100px;
+                                border: 1px solid $main-color;
+                                font-family: 'Gotham Pro';
+                                font-weight: 400;
+                                font-size: 0.75rem;
+                                line-height: 0.75rem;
+                                color: $main-color;
+                                padding: 13px 20px 13px 20px;
+                                appearance: none;
+                                -moz-appearance: none;
+                                -webkit-appearance: none;
+                                overflow: hidden;
+                                background: url(../img/svg/select-arrow.svg) no-repeat right $second-color;
+                                background-position-x: calc(100% - 20px);
+                                cursor: pointer;
+                                outline: none;
+                                width: 100%;
+                            }
+                        }
+            
+                        .type-filterr {
+                            width: 100%;
+                            margin: 0 0 15px 0;
+            
+                            > p {
+                                color: $main-color;
+                                font-size: 0.625rem;
+                                line-height: 0.9375rem;
+                                margin: 0 0 10px 0;
+            
+                                > b {
+                                    font-family: 'Gotham Pro Bold';
+                                    font-weight: 700;
+                                }
+                            }
+            
+                            > select {
+                                border-radius: 100px;
+                                border: 1px solid $main-color;
+                                font-family: 'Gotham Pro';
+                                font-weight: 400;
+                                font-size: 0.75rem;
+                                line-height: 0.75rem;
+                                color: $main-color;
+                                padding: 13px 20px 13px 20px;
+                                appearance: none;
+                                -moz-appearance: none;
+                                -webkit-appearance: none;
+                                overflow: hidden;
+                                background: url(../img/svg/select-arrow.svg) no-repeat right $second-color;
+                                background-position-x: calc(100% - 20px);
+                                cursor: pointer;
+                                outline: none;
+                                width: 100%;
+                            }
+                        }
+            
+                        .squere-filterr {
+                            width: 100%;
+                            margin: 0 0 30px 0;
+            
+                            > p {
+                                color: $main-color;
+                                font-size: 0.625rem;
+                                line-height: 0.9375rem;
+                                margin: 0 0 10px 0;
+            
+                                > b {
+                                    font-family: 'Gotham Pro Bold';
+                                    font-weight: 700;
+                                }
+                            }
+            
+                            .squere-wrapperr {
+
+                                .range_container {
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                
+                                    .sliders_control {
+                                        position: relative;
+                
+                                        input[type=range]::-webkit-slider-thumb {
+                                            -webkit-appearance: none;
+                                            pointer-events: all;
+                                            width: 14px;
+                                            height: 14px;
+                                            background-color: $third-color;
+                                            border-radius: 50%;
+                                            cursor: pointer;
+                                        }
+                                          
+                                        input[type=range]::-moz-range-thumb {
+                                            -webkit-appearance: none;
+                                            pointer-events: all;
+                                            width: 14px;
+                                            height: 14px;
+                                            background-color: $third-color;
+                                            border-radius: 50%;
+                                            cursor: pointer; 
+                                        }
+                                          
+                                        input[type=range]::-webkit-slider-thumb:hover {
+                                            box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                            -webkit-box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                        }
+                                          
+                                        input[type=range]::-webkit-slider-thumb:active {
+                                            box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                            -webkit-box-shadow: inset 0 0 3px $third-color, 0 0 9px $third-color;
+                                        }
+                                          
+                                        input[type="range"] {
+                                            -webkit-appearance: none; 
+                                            appearance: none;
+                                            height: 2px;
+                                            width: 100%;
+                                            position: absolute;
+                                            background-color: $four-color;
+                                            pointer-events: none;
+                                        }
+                                    }
+                
+                                    .form_control {
+                                        position: relative;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        gap: 10px;
+                                        margin: 0 0 14px 0;
+                    
+                                        .form_control_container {
+                    
+                                            > input {
+                                                color: $main-color;
+                                                text-align: center;
+                                                font-size: 0.625rem;
+                                                line-height: 0.9375rem;
+                                                border-radius: 100px;
+                                                border: 1px solid $main-color;
+                                                padding: 4px;
+                                                width: 70px;
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+            
+                                    #fromSlider {
+                                        height: 0;
+                                        z-index: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                        .flats-filter-link-mob {
+
+                            > a {
+                                border-radius: 100px;
+                                background: $third-color;
+                                border: 1px solid $third-color;
+                                padding: 12.5px 18px;
+                                color: $second-color;
+                                text-align: center;
+                                font-family: "Gotham Pro Bold";
+                                font-weight: 700;
+                                font-size: 0.875rem;
+                                line-height: 1.3125rem;
+                                text-transform: uppercase;
+                                display: inline-block;
+                                width: 100%;
+                                transition: background 0.7s ease, color 0.7s ease;
+                
+                                &:hover {
+                                    background: transparent;
+                                    color: $third-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .flats-cards {
+            grid-template-columns: repeat(auto-fill, minmax(47.5%, 1fr));
+            gap: 30px;
+    
+            .flat-card {
+    
+                > a {
+    
+                    .flat-details {
+    
+                        .flat-img {
+                            padding: 10px 0 0 0;
+    
+                            > img {
+                                margin: 0 auto;
+                            }
+                        }
+    
+                        .flat-descr {
+                            padding: 20px 20px 30px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .pagination {
+            margin: 40px 0 0 0;
+    
+            > ul {
+                gap: 22px;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+body {
+
+    &._touch {
+
+        .flats {
+
+            .flats-filter {
+
+                .filter-mob {
+
+                    .filter-title {
+
+                        &._active {
+
+                            > p {
+                                border-radius: 20px 20px 0 0;
+
+                                &::after {
+                                    width: 30px;
+                                    height: 30px;
+                                    right: 15px;
+                                    background-image: url(../img/svg/filter-link-close.svg);
+                                }
+                            }
+
+                            .filter-list {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translate(0px, 0px);
+                                pointer-events: all;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {}
