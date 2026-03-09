@@ -33,12 +33,12 @@
     <?php include 'components/genplan_main.php' ?>
 
     <?php if (get_field('plan_h_b6')) : ?>
-    
-<!--        <div class="plan">
+
+        <!--        <div class="plan">
             <img src="<?php the_field('plan_h_b6'); ?>" alt="plan-img" loading="lazy">
         </div>-->
     <?php endif ?>
-	
+
     <div class="project">
         <div class="project-inner">
             <div class="project-img">
@@ -183,7 +183,8 @@
                                     <?php
                                     $args = array(
                                         'post_type' => 'apartment',
-                                        'posts_per_page' => -1, 'meta_query' => array(
+                                        'posts_per_page' => -1,
+                                        'meta_query' => array(
                                             array(
                                                 'key'   => 'typ_kvartyry',
                                                 'value' => '3',
@@ -292,7 +293,7 @@
         </div>
     </div>
 
-<!--     <div class="visit">
+    <!--     <div class="visit">
         <div class="visit-inner">
             <div class="visit-img">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/content/content-img5.jpg" alt="visit-img" loading="lazy">
@@ -306,7 +307,7 @@
         </div>
     </div> -->
 
-    
+
     <div class="gallery" id="gallery-home"> <!-- data-aos -->
         <div class="container gallery__container">
 
@@ -328,7 +329,7 @@
                         <div class="gallery-main">
                             <h2><?php the_field('zagolovok_h_b7'); ?></h2>
                             <p><?php the_field('subtitle_b7'); ?></p>
-                            <a href="<?= site_url('gallery')?>">Дивитись галерею</a>
+                            <a href="<?= site_url('gallery') ?>">Дивитись галерею</a>
                         </div>
                     </div>
                 <?php endif ?>
