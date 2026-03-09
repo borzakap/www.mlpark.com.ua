@@ -1,0 +1,395 @@
+.progress {
+    margin: 120px 0;
+
+    .progress-inner {
+
+        .progress-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 0 0 30px 0;
+
+            > h3 {
+                color: $main-color;
+                font-family: 'Gotham Pro Bold';
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 3.75rem;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            > a {
+                border-radius: 100px;
+                background: $third-color;
+                border: 1px solid #123E3C;
+                display: inline-block;
+                padding: 17.5px 22px;
+                color: $second-color;
+                text-align: center;
+                font-family: "Gotham Pro Bold";
+                font-weight: 700;
+                font-size: 0.875rem;
+                line-height: 1.3125rem;
+                text-transform: uppercase;
+                min-width: 260px;
+                transition: background 0.7s ease, color 0.7s ease;
+
+                &:hover {
+                    background: $second-color;
+                    color: $third-color;
+                }
+            }
+        }
+
+        .progress-slider {
+
+            .swiper {
+                z-index: 0;
+
+                &.progress-swiper {
+                    padding: 10px 0 0 0;
+
+                    .swiper-wrapper {
+                        margin: 0 0 55px 0;
+
+                        .swiper-slide {
+
+                            .card-details {
+
+                                > a {
+                                    display: block;
+                                    transition: transform 0.7s ease;
+
+                                    &:hover {
+                                        transform: translateY(-5px);
+                                    }
+
+                                    .card-img {
+
+                                        > img {
+                                            width: 100%;
+                                            object-fit: cover;
+                                            min-height: 360px;
+                                            max-height: 360px;
+                                            height: 100%;
+                                            display: block;
+                                        }
+                                    }
+
+                                    .card-info {
+                                        padding: 10px 0;
+                                        display: flex;
+                                        align-items: flex-end;
+                                        gap: 5px;
+
+                                        .text {
+
+                                            > p {
+                                                color: $main-color;
+                                                font-size: 0.875rem;
+                                                line-height: 1.3125rem;
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .swiper-nav {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 40px;
+
+                        .swiper-scrollbar {
+                            width: 82.8%;
+                            background: rgba(18, 62, 60, .4);
+                            left: 0;
+                            height: 3px;
+                            border-radius: 0px;
+                            bottom: 7px;
+
+                            .swiper-scrollbar-drag {
+                                background: $third-color;
+                            }
+                        }
+
+                        .swiper-navigation {
+                            width: 17.2%;
+                            position: relative;
+                            margin-left: auto;
+
+                            .swiper-button-next,
+                            .swiper-button-prev {
+                                position: absolute;
+                                background-repeat:no-repeat;
+                                background-position: center;
+                                left: auto;
+                                width: 77px;
+                                height: 25px;
+                                cursor: pointer;
+                                -webkit-background-size: 77px 25px;
+                                background-size: 77px 25px;
+                            }
+
+                            .swiper-button-next {
+                                background-image: url('../img/svg/arrow-next-green.svg');
+                                right: 0;
+                            }
+
+                            .swiper-button-prev {
+                                background-image: url('../img/svg/arrow-next-green.svg');
+                                right: 104px;
+                                transform: rotate(180deg);
+                            }
+
+                            .swiper-button-next::after,
+                            .swiper-button-prev::after {
+                                display:none;
+                            }
+
+                            .swiper-button-next.swiper-button-disabled,
+                            .swiper-button-prev.swiper-button-disabled {
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mob-link {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+    .progress {
+
+        .progress-inner {
+
+            .progress-slider {
+
+                .swiper {
+
+                    &.progress-swiper {
+
+                        .swiper-nav {
+
+                            .swiper-scrollbar {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    .progress {
+
+        .progress-inner {
+
+            .progress-slider {
+
+                .swiper {
+
+                    &.progress-swiper {
+
+                        .swiper-nav {
+
+                            .swiper-scrollbar {
+                                width: 75%;
+                                height: 2px;
+                                bottom: 11px;
+                            }
+
+                            .swiper-navigation {
+
+                                .swiper-button-next,
+                                .swiper-button-prev {
+                                    width: 56px;
+                                    height: 18px;
+                                    -webkit-background-size: 56px 18px;
+                                    background-size: 56px 18px;
+                                }
+
+                                .swiper-button-prev {
+                                    right: 65px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .progress {
+        margin: 60px 0;
+
+        .progress-inner {
+
+            .progress-title {
+                gap: 0;
+                margin: 0 0 20px 0;
+
+                > h3 {
+                    font-size: 1.5rem;
+                    line-height: 1.875rem;
+                }
+
+                > a {
+                    display: none;
+                }
+            }
+
+            .progress-slider {
+
+                .swiper {
+
+                    &.progress-swiper {
+
+                        .swiper-wrapper {
+                            margin: 0 0 58px 0;
+
+                            .swiper-slide {
+
+                                .card-details {
+
+                                    > a {
+
+                                        .card-img {
+
+                                            > img {
+                                                min-height: 300px;
+                                                max-height: 300px;
+                                            }
+                                        }
+
+                                        .card-info {
+                                            padding: 15px 0 0 0;
+                                            gap: 4px;
+
+                                            .text {
+
+                                                > p {
+                                                    font-size: 0.75rem;
+                                                    line-height: 1.125rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .swiper-nav {
+
+                            .swiper-scrollbar {
+                                width: 70%;
+                                height: 2px;
+                                bottom: 12px;
+                            }
+
+                            .swiper-navigation {
+
+                                .swiper-button-next,
+                                .swiper-button-prev {
+                                    width: 56px;
+                                    height: 18px;
+                                    -webkit-background-size: 56px 18px;
+                                    background-size: 56px 18px;
+                                }
+
+                                .swiper-button-prev {
+                                    right: 75px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mob-link {
+                display: flex;
+                margin: 40px 0 0 0;
+
+                > a {
+                    border-radius: 100px;
+                    background: $third-color;
+                    border: 1px solid $third-color;
+                    display: inline-block;
+                    padding: 14px 20px;
+                    color: $second-color;
+                    text-align: center;
+                    font-family: "Gotham Pro Bold";
+                    font-weight: 700;
+                    font-size: 0.75rem;
+                    line-height: 1.125rem;
+                    text-transform: uppercase;
+                    min-width: 240px;
+                    transition: background 0.7s ease, color 0.7s ease;
+
+                    &:hover {
+                        background: $second-color;
+                        color: $third-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-breakpoint) {
+    .progress {
+
+        .progress-inner {
+
+            .progress-slider {
+
+                .swiper {
+
+                    &.progress-swiper {
+
+                        .swiper-wrapper {
+
+                            .swiper-slide {
+
+                                .card-details {
+
+                                    > a {
+
+                                        .card-img {
+
+                                            > img {
+                                                min-height: 261px;
+                                                max-height: 261px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .swiper-nav {
+
+                            .swiper-scrollbar {
+                                width: 47%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

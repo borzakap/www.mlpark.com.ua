@@ -1,0 +1,27 @@
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# DDEV
+.ddev/
+
+# Content
+/wp-content/languages/
+/wp-content/upgrade/
+/wp-content/uploads/
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+
+# Operating System & IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Environment
+.env
+wp-config.php

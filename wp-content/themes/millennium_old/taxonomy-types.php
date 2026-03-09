@@ -1,0 +1,106 @@
+<?php get_header(); ?>
+
+    <main>
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li>
+                      <a href="index.html">Головна</a> <span>- Новини</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-news">
+            <div class="container">
+                <?php
+                $current_term = get_queried_object();
+                $terms = get_terms('types');
+                ?>
+                <div class="news-inner">
+                    <div class="news-title">
+                        <h1>Новини</h1>
+                        <div class="news-link">
+                            <a href="/newse/">Всі статті</a>
+                            <?php foreach ($terms as $term) : ?>
+                                <a <?php echo ($term->term_id === $current_term->term_id) ? 'class="active-news-link"' : ''; ?> href="<?php echo get_term_link($term); ?>">
+                                    <?php echo $term->name; ?>
+                                </a>
+                            <?php endforeach; ?>
+                           
+                        </div>
+                    </div>
+                    <div class="news-cards">
+                    <?php
+                        $args = array(
+                            'post_type' => 'news',
+                            'posts_per_page' => 7,
+                            'paged' => $paged,
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'types',
+                                    'field' => 'id',
+                                    'terms' => $current_term->term_id,
+                                ),
+                            ),
+                        );
+        
+                        $news = new WP_Query( $args );
+
+                        if ( $news->have_posts() ) {
+                            while ( $news->have_posts() ) {
+                                $news->the_post(); ?>
+                                <div class="news-card">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="news-card-img">
+                                            <?php echo get_the_post_thumbnail( $page->ID, 'full', array('loading' => 'lazy')); ?>
+                                        </div>
+                                        <div class="news-card-descr">
+                                            <div class="news-card-title">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24" fill="none">
+                                                    <path d="M11.5289 0C11.61 0.0171844 11.693 0.0322208 11.7741 0.0494052C11.9672 0.0923663 12.0316 0.173992 11.9859 0.373761C11.9236 0.635824 11.8509 0.895738 11.7554 1.14706C11.4292 2.02132 11.0719 2.88269 10.6191 3.6968C10.2369 4.38847 9.7529 5.00496 9.25852 5.61286C8.65819 6.3475 8.00386 7.02628 7.2706 7.61915C6.45009 8.28075 5.57141 8.84568 4.64704 9.33544C3.79745 9.78868 2.91462 10.1603 1.99856 10.446C1.72021 10.5319 1.55818 10.7123 1.50002 11.0174C1.38369 11.621 1.23413 12.2203 1.11988 12.8239C1.02848 13.3072 0.957859 13.7969 0.901773 14.2867C0.839456 14.828 0.797911 15.3736 0.758443 15.9192C0.73767 16.2157 0.72313 16.5121 0.733516 16.8085C0.756366 17.5324 0.781293 18.2585 0.831147 18.9802C0.9267 20.37 1.15104 21.7426 1.40862 23.1088C1.4564 23.3644 1.50833 23.6178 1.55818 23.8735C1.56234 23.8928 1.56441 23.9143 1.56857 23.9465C1.46886 23.9551 1.37123 23.9658 1.2736 23.9744C1.17389 23.983 1.07418 23.983 0.976554 23.9981C0.916314 24.0066 0.897618 23.9873 0.885155 23.9293C0.768829 23.3987 0.635886 22.8725 0.536178 22.3398C0.409466 21.6739 0.297295 21.0037 0.201742 20.3313C0.131116 19.8351 0.0895712 19.3346 0.0584126 18.8341C0.0230995 18.2756 0.00232732 17.7171 0.000250075 17.1565C-0.00390441 16.3016 0.0438716 15.4509 0.131116 14.6003C0.305604 12.9034 0.623422 11.2365 1.12611 9.61254C1.66827 7.85758 2.44724 6.22076 3.49002 4.72357C4.44555 3.35096 5.6545 2.27264 7.07118 1.4349C8.10357 0.824853 9.19828 0.384502 10.3595 0.120291C10.59 0.0687377 10.8268 0.0494052 11.0595 0.0150364C11.0844 0.0107403 11.1073 0.00429611 11.1322 0C11.2651 0 11.396 0 11.5289 0ZM10.9847 1.11054C10.9889 0.904331 10.9265 0.835593 10.7894 0.835593C10.7396 0.835593 10.6877 0.835593 10.6378 0.850629C10.5007 0.889294 10.3636 0.927959 10.2286 0.975216C8.7309 1.4843 7.36199 2.24686 6.09903 3.21349C5.68982 3.5271 5.28268 3.84287 4.93785 4.23167C3.65827 5.67301 2.69651 7.31627 2.06503 9.1636C2.04218 9.23019 2.02764 9.30107 2.01725 9.36981C1.9944 9.53951 2.0858 9.63402 2.2499 9.6061C2.32676 9.59321 2.40362 9.56958 2.47632 9.53951C3.73721 9.02612 4.91708 8.35808 6.02633 7.55685C6.52487 7.19598 7.01717 6.82651 7.44716 6.38187C8.50448 5.28636 9.41431 4.07271 10.1829 2.74521C10.4322 2.3156 10.6544 1.86881 10.8788 1.42631C10.9369 1.31246 10.9619 1.18143 10.9847 1.11484V1.11054Z" fill="#123E3C"/>
+                                                </svg>
+                                                <h3><?php the_title(); ?></h3>
+                                            </div>
+                                            <div class="news-card-text">
+                                                <p><?php the_field( 'korotkyj_opys-sn' ); ?></p>
+                                            </div>
+                                            <div class="news-card-btn">
+                                                <p>Перейти</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                            }
+                            /* Restore original Post Data */
+                            wp_reset_postdata();
+                                }
+                        ?>
+                    </div>
+                    <div class="pagination">
+                        <ul>
+                            <?php
+                            $big = 999999999;
+
+                            echo paginate_links( array(
+                            'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                            'format'    => '?paged=%#%',
+                            'current'   => max( 1, get_query_var( 'paged' ) ),
+                            'total'     => $news->max_num_pages,
+                            'prev_text' => __( '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7461 3.6665L6.41273 10.9998L13.7461 18.3332L15.584 16.4998L10.0794 10.9998L15.584 5.49984L13.7461 3.6665Z" fill="#B8CEBB"/>
+                        </svg>' ),
+                            'next_text' => __( '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25393 3.6665L15.5873 10.9998L8.25393 18.3332L6.41602 16.4998L11.9206 10.9998L6.41602 5.49984L8.25393 3.6665Z" fill="#B8CEBB"/>
+                        </svg>' ),
+                            ) );
+                            ?>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<?php get_footer();
