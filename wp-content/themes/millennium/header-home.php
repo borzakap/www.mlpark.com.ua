@@ -216,7 +216,7 @@
             </div>
             <h1 data-aos="fade-up" data-aos-duration="800"> <?php the_field('zagolovok_h_b1'); ?></h1>
             <p><?php the_field('opys_h_b1'); ?></p>
-            <a href="/choose-flat/">Обрати квартиру</a>
+            <a href="/terms-purchase/">Умови придбання</a>
           </div>
         </div>
         <img id="header-home-img" src="<?php echo get_template_directory_uri(); ?>/img/background/home-bg.webp" alt="home-bg">
