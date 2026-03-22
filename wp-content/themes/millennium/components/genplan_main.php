@@ -2,7 +2,7 @@
     <div class="genplan">
         <img src="<?php echo get_template_directory_uri(); ?>/img/genplan/mlmain2.png" alt="genplan-img" class="img-fluid" loading="lazy" width="3840" height="2160">
         <svg id="svg__plan" class="svg-plan" data-name="Main genplan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024">
-            <a href="https://mlpark.com.ua/choose-flat/#building1" data-section="1" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/#building1')); ?>" data-section="1" class="genplan_link">
                 <g id="g1">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -19,7 +19,7 @@
                     <text fill="white" x="150" text-anchor="middle" font-size="30" y="369">БУДИНОК 1</text>
                 </g>
             </a>
-            <a href="https://mlpark.com.ua/choose-flat/#building2" data-section="2" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/#building2')); ?>" data-section="2" class="genplan_link">
                 <g id="g2">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -36,7 +36,7 @@
                     <text fill="white" y="431" font-size="32" x="325">БУДИНОК 2</text>
                 </g>
             </a>
-            <a href="https://mlpark.com.ua/choose-flat/#building3" data-section="3" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/#building3')); ?>" data-section="3" class="genplan_link">
                 <g id="g3">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -53,7 +53,7 @@
                     <text fill="white" font-size="32" x="693" y="307">БУДИНОК 3</text>
                 </g>
             </a>
-            <a href="#" data-section="4" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/')); ?>" data-section="4" class="genplan_link">
                 <g id="g4">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -67,9 +67,13 @@
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
                         d="m 923.14767,425.50851 -13.09577,4.78099 v 8.1069 l -1.03935,1.87083 1.42717,2.29357 -0.42196,28.94706 h -4.47287 l 0.59075,4.55726 2.19424,3.12257 -7.83278,194.09256 -24.13569,19.42233 -0.2438,10.56445 5.93999,3.16582 -1.13644,18.18315 -56.26501,-26.27773 -1.65688,1.97249 1.42019,1.49908 0.47339,9.23123 -7.77239,3.01022 -24.77624,-17.34337 -8.09358,6.44183 -96.1334,-44.86855 0.37767,-37.76714 5.64048,-4.67439 0.70963,-13.24641 48.68516,-30.57413 -2.7076,-172.26285 -1.23874,-0.95721 0.16892,-7.80781 79.16361,20.3904 12.12866,-6.00415 61.29274,19.23324 7.29172,-4.43844 z"
                         id="path11" />
+                    <text fill="white" font-size="20" x="930" y="307" text-anchor="middle" font-weight="700">
+                        <tspan x="930" y="307">ПРОДАЖ</tspan>
+                        <tspan x="930" dy="1.15em">НЕ РОЗПОЧАТО</tspan>
+                    </text>
                 </g>
             </a>
-            <a href="#" data-section="5" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/')); ?>" data-section="5" class="genplan_link">
                 <g id="g5">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -83,9 +87,13 @@
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
                         d="m 1238.6182,226.75409 -29.8178,17.47463 -0.416,10.26288 -10.2629,-0.83213 -1.304,7.18316 -27.6538,13.51069 -9.0838,-2.81712 -30.9309,17.82261 13.6257,4.42691 -21.4446,12.59082 -10.5211,-7.30153 0.6899,-13.16574 -47.1437,-9.94617 -0.8624,22.01956 -94.11713,-15.44289 -5.52884,-5.24426 35.32763,-14.87907 5.72224,1.93379 19.9185,-7.00919 -3.7692,-3.37923 0.5199,-2.46943 35.6119,-13.127 5.1988,0.77982 8.0581,0.77983 13.5169,-6.36855 -2.3394,-4.54895 32.8824,-13.25697 h 11.4374 l 7.6683,-2.20949 62.7756,7.4083 v 1.68962 z"
                         id="path13" />
+                    <text fill="white" font-size="18" x="1115" y="250" text-anchor="middle" font-weight="700">
+                        <tspan x="1115" y="250">ПРОДАЖ</tspan>
+                        <tspan x="1115" dy="1.15em">НЕ РОЗПОЧАТО</tspan>
+                    </text>
                 </g>
             </a>
-            <a href="#" data-section="6" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/')); ?>" data-section="6" class="genplan_link">
                 <g id="g6">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -99,9 +107,13 @@
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
                         d="m 1414.3347,564.91736 36.4477,-53.82104 -2.6697,11.01776 -6.0304,8.41095 -68.3986,256.61352 36.9765,15.39363 -10.6327,23.8046 -0.6348,6.50658 -42.0548,-15.86972 -17.4567,31.26336 v 0 l 56.9723,-230.90455 3.3327,2.06306 1.5869,-8.09356 -0.9521,-0.79349 8.9477,-34.84075 2.0199,-1.57102 z"
                         id="path15" />
+                    <text fill="white" font-size="20" x="1185" y="610" text-anchor="middle" font-weight="700">
+                        <tspan x="1185" y="610">ПРОДАЖ</tspan>
+                        <tspan x="1185" dy="1.15em">НЕ РОЗПОЧАТО</tspan>
+                    </text>
                 </g>
             </a>
-            <a href="#" data-section="7" class="genplan_link">
+            <a href="<?php echo esc_url(home_url('/choose-flat/')); ?>" data-section="7" class="genplan_link">
                 <g id="g7">
                     <path
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -115,6 +127,10 @@
                         style="fill-opacity:.5;stroke-width:5px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
                         d="m 1509.4232,297.09214 11.4934,-12.03548 -60.2859,230.51748 -16.5177,24.05986 14.9218,-54.49691 -0.1188,-2.01967 40.4007,-146.98794 0.3288,-2.03671 2.0123,-1.37917 -0.01,-1.87724 -1.7215,-1.4101 7.5064,-24.97457 1.4064,-0.78406 z"
                         id="path17" />
+                    <text fill="white" font-size="20" x="1360" y="260" text-anchor="middle" font-weight="700">
+                        <tspan x="1360" y="260">ПРОДАЖ</tspan>
+                        <tspan x="1360" dy="1.15em">НЕ РОЗПОЧАТО</tspan>
+                    </text>
                 </g>
             </a>
         </svg>
