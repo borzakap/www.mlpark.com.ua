@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.fancybox.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <meta name="google-site-verification" content="wVLUU6Ybndg8kFJvRxtOmHhma3rtg5CJ8gA1cb4E6rI" />
+    <script defer type="text/javascript" src="https://services.adsquiz.io/adsquiz_integration/v2/adsquizscript_intsitecode.js" data-widget-sitecode-v2></script>
     <?php wp_head(); ?>
 </head>
 

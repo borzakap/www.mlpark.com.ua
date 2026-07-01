@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/aos.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+  <script defer type="text/javascript" src="https://services.adsquiz.io/adsquiz_integration/v2/adsquizscript_intsitecode.js" data-widget-sitecode-v2></script>
   <?php wp_head(); ?>
 </head>
 
