@@ -25,3 +25,4 @@
 # Environment
 .env
 wp-config.php
+.htaccess
