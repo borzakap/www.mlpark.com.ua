@@ -1,6 +1,6 @@
 <div class="genplan">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/genplan/commers-5-6-7.png" alt="genplan-img" class="img-fluid" loading="lazy" width="3359" height="2377">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3359 2377">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/genplan/commers-5-6-7.png" alt="genplan-img" class="img-fluid" loading="lazy" width="1760" height="1245">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1760 1245">
         <g>
             <polygon points="125,425,235,425,235,390,325,390,325,515,125,515" id="5001" href="<?= get_page_link() ?>"></polygon>
         </g>
